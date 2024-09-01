@@ -1,0 +1,12 @@
+[
+{
+    "title": "customers-10000.csv",
+    "type":"csv",
+    "required":["Index", "Customer Id", "First Name", "Last Name", "Company", "City", "Country", "Phone 1", "Phone 2", "Email", "Subscription Date", "Website"]
+},
+{
+    "title": "testjson.json",
+    "type":"json",
+    "required":["order_id", "order_date", "customer_id", "order_status"]
+}
+]

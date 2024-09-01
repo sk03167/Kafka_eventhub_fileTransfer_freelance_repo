@@ -1,0 +1,6 @@
+kafapp_environ/*
+archive/*
+test_folder/*
+test_recieve_folder/*
+.DS_Store
+config.env
