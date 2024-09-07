@@ -8,17 +8,7 @@ load_dotenv('/Users/shivanshk/Documents/pdev/kafapp1/config.env')
 
 from getConfig import load_kafka_conf
 
-config =  {
-            'bootstrap.servers': os.getenv('KAFKA_BOOTSTRAP_SERVERS'),  # Replace with your Kafka broker address
-            'security.protocol': os.getenv('KAFKA_SECURITY_PROTOCOL'),
-            'sasl.mechanism': os.getenv('KAFKA_SASL_MECHANISM'),  # Replace with your SASL mechanism (e.g., PLAIN, SCRAM-SHA-256, SCRAM-SHA-512)
-            'sasl.username': os.getenv('KAFKA_SASL_USERNAME'),  # Replace with your SASL username
-            'sasl.password': os.getenv('KAFKA_SASL_PASSWORD'), 
-            'group.id': os.getenv('KAFKA_GROUP_ID'),  # Replace with your consumer group
-            'auto.offset.reset': os.getenv('KAFKA_AUTO_OFFSET_RESET') # Start reading at the beginning if no previous offset is found
-        }
-
-consumer = Consumer(config)
+consumer = Consumer(load_kafka_conf('consumer'))
 topic = 'filetransferhub'
 consumer.subscribe([topic])
 
