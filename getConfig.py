@@ -8,8 +8,7 @@ def load_kafka_conf(param):
             'security.protocol': os.getenv('KAFKA_SECURITY_PROTOCOL'),
             'sasl.mechanism': os.getenv('KAFKA_SASL_MECHANISM'),
             'sasl.username': os.getenv('KAFKA_SASL_USERNAME'),
-            'sasl.password': os.getenv('KAFKA_SASL_PASSWORD'),
-            'sasl.mechanism': os.getenv()
+            'sasl.password': os.getenv('KAFKA_SASL_PASSWORD')
         },
         'consumer': {
             'bootstrap.servers': os.getenv('KAFKA_BOOTSTRAP_SERVERS'),  # Replace with your Kafka broker address
@@ -19,6 +18,13 @@ def load_kafka_conf(param):
             'sasl.password': os.getenv('KAFKA_SASL_PASSWORD'), 
             'group.id': os.getenv('KAFKA_GROUP_ID'),  # Replace with your consumer group
             'auto.offset.reset': os.getenv('KAFKA_AUTO_OFFSET_RESET') # Start reading at the beginning if no previous offset is found
+        },
+        'producer_local': {
+            'bootstrap.servers': os.getenv('KAFKA_BOOTSTRAP_SERVERS_LOCAL')
+        },
+        'consumer_local': {
+            'bootstrap.servers': os.getenv('KAFKA_BOOTSTRAP_SERVERS_LOCAL'),
+            'group.id': os.getenv('KAFKA_GROUP_ID')
         }
     }
     if param in options:

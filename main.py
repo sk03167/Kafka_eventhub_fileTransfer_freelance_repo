@@ -13,7 +13,7 @@ from sendnArchive import sendnArchive
 
 # print (load_kafka_conf('producer'))
 
-producer = Producer(load_kafka_conf('producer'))
+producer = Producer(load_kafka_conf('producer_local'))
 # topic = 'filetransferhub'
 # chunk_size = 1024 * 500  # 1 MB
 

@@ -5,7 +5,7 @@ import base64
 
 def send_file(file_path,producer):
 
-    topic = os.getenv('KAFKA_TOPIC')
+    topic = os.getenv('KAFKA_TOPIC_LOCAL')
     chunk_size = eval(os.getenv('CHUNK_SIZE'))
 
     with open(file_path, 'rb') as file:

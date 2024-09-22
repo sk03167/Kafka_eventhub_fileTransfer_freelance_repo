@@ -8,8 +8,8 @@ load_dotenv('/Users/shivanshk/Documents/pdev/kafapp1/config.env')
 
 from getConfig import load_kafka_conf
 
-consumer = Consumer(load_kafka_conf('consumer'))
-topic = 'filetransferhub'
+consumer = Consumer(load_kafka_conf('consumer_local'))
+topic = os.getenv('KAFKA_TOPIC_LOCAL')
 consumer.subscribe([topic])
 
 destination_folder = '/Users/shivanshk/Documents/pdev/kafapp1/test_recieve_folder'
