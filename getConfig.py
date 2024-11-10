@@ -24,7 +24,8 @@ def load_kafka_conf(param):
         },
         'consumer_local': {
             'bootstrap.servers': os.getenv('KAFKA_BOOTSTRAP_SERVERS_LOCAL'),
-            'group.id': os.getenv('KAFKA_GROUP_ID')
+            'group.id': os.getenv('KAFKA_GROUP_ID'),
+            'auto.offset.reset': os.getenv('KAFKA_AUTO_OFFSET_RESET')
         }
     }
     if param in options:

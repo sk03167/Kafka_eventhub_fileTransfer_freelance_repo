@@ -10,13 +10,7 @@ from getConfig import load_kafka_conf
 
 from sendnArchive import sendnArchive
 
-
-# print (load_kafka_conf('producer'))
-
 producer = Producer(load_kafka_conf('producer_local'))
-# topic = 'filetransferhub'
-# chunk_size = 1024 * 500  # 1 MB
-
 
 if __name__ == "__main__":
     source_folder = '/Users/shivanshk/Documents/pdev/kafapp1/test_folder'
