@@ -5,7 +5,7 @@ import base64
 import pickle
 from dotenv import load_dotenv
 load_dotenv('/Users/shivanshk/Documents/pdev/kafapp1/config.env')
-from consumer_df import consume_data_df
+
 
 from getConfig import load_kafka_conf
 
